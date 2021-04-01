@@ -1,0 +1,6 @@
+/.idea/
+/src/test/resources/config/config.properties
+/todoist_restassured_test.iml
+/target/
+/logs/
+/reports_*

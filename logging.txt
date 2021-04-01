@@ -1,0 +1,134 @@
+Request method:	POST
+Request URI:	https://api.todoist.com/rest/v1/tasks
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		X-Request-Id=178bde05-5cec-4acb-9c24-ff0a879ce4ce
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 0,
+    "project_id": 0,
+    "section_id": 0,
+    "content": "TA_CreateTask_nZDMbuCDbK",
+    "completed": false,
+    "label_ids": null,
+    "parent_id": 0,
+    "order": 0,
+    "priority": 0,
+    "due": null,
+    "url": null,
+    "comment_count": 0,
+    "assignee": 0
+}
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 324
+Connection: keep-alive
+Date: Thu, 01 Apr 2021 13:09:24 GMT
+X-Cache: Miss from cloudfront
+Via: 1.1 ab7ef1002486648bddb0e6bc684500bd.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR62-C4
+X-Amz-Cf-Id: nmz5APbVS2V1CiAoQnEtPoaTMT4PoWP4j9hkChsRS5aVML0yghPEHA==
+
+{
+    "id": 4709022280,
+    "assigner": 0,
+    "project_id": 2230146330,
+    "section_id": 0,
+    "order": 1,
+    "content": "TA_CreateTask_nZDMbuCDbK",
+    "completed": false,
+    "label_ids": [
+        
+    ],
+    "priority": 1,
+    "comment_count": 0,
+    "creator": 26997393,
+    "created": "2021-04-01T13:09:24Z",
+    "url": "https://todoist.com/showTask?id=4709022280"
+}
+Request method:	POST
+Request URI:	https://api.todoist.com/rest/v1/tasks/4709022280
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	taskId=4709022280
+Headers:		X-Request-Id=374e536c-486b-4b3a-9bdd-af6797be80ae
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 0,
+    "project_id": 0,
+    "section_id": 0,
+    "content": "TA_TaskUpdatejVmxDn31JO",
+    "completed": false,
+    "label_ids": null,
+    "parent_id": 0,
+    "order": 0,
+    "priority": 0,
+    "due": null,
+    "url": null,
+    "comment_count": 0,
+    "assignee": 0
+}
+HTTP/1.1 204 No Content
+Connection: keep-alive
+Date: Thu, 01 Apr 2021 13:09:25 GMT
+X-Cache: Miss from cloudfront
+Via: 1.1 ed123fb341b4af39cf924aafa949d977.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR62-C4
+X-Amz-Cf-Id: ydezFDxPUsr6Zx6CPVTooLqRHPuiBWh1vwAyvrFB0WIx29A-bQYKOQ==
+Request method:	DELETE
+Request URI:	https://api.todoist.com/rest/v1/tasks/4709022280
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	taskId=4709022280
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 No Content
+Connection: keep-alive
+Date: Thu, 01 Apr 2021 13:09:26 GMT
+X-Cache: Miss from cloudfront
+Via: 1.1 10b6eeb8648a069cb8a332f054cd3047.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR62-C4
+X-Amz-Cf-Id: ag_8J3h60eg9xE17dZixkVtlY-Ob3s6wpj7PZ7sMQNIICxzrhYeqpw==
+Request method:	GET
+Request URI:	https://api.todoist.com/rest/v1/tasks/4709022280
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	taskId=4709022280
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+Content-Length: 10
+Connection: keep-alive
+Date: Thu, 01 Apr 2021 13:09:26 GMT
+X-Content-Type-Options: nosniff
+X-Cache: Error from cloudfront
+Via: 1.1 a59cacde45227666db5b17829b32dd95.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR62-C4
+X-Amz-Cf-Id: F8Dsb3q3sBBhMP-kNMIH-Poe2Rt5JhwovboP2tpiqUO4bQ7e1MHq-g==
+
+Not Found
+
