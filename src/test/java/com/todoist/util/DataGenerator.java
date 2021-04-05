@@ -21,7 +21,7 @@ public class DataGenerator {
      */
     @DataProvider(name="createProjectData")
     public Object[][] getCreateProjectData() throws InvalidFormatException, IOException {
-        Object[][] data = com.todoist.util.ExcelReader.getTestData(createTaskDataSheetName);
+        Object[][] data = ExcelReader.getTestData(createTaskDataSheetName);
         printData(data);
         return data;
     }
@@ -47,7 +47,7 @@ public class DataGenerator {
      */
     @DataProvider(name="createTask")
     public Object[][] getCreateTaskData() throws InvalidFormatException, IOException {
-        Object[][] data = com.todoist.util.ExcelReader.getTestData(createTaskDataSheetName);
+        Object[][] data = ExcelReader.getTestData(createTaskDataSheetName);
         printData(data);
         return data;
     }

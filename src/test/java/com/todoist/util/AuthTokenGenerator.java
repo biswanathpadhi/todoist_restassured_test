@@ -1,12 +1,14 @@
 package com.todoist.util;
 
 import com.todoist.pojo.selenium.LoginPage;
-import com.todoist.stepdefinitions.Presteps;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.RestAssured;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static io.restassured.RestAssured.given;
 
 public class AuthTokenGenerator {
     private Logger log = LogManager.getLogger();
@@ -27,8 +29,33 @@ public class AuthTokenGenerator {
      * @return bearer token
      */
     private String getTokenFromAuthorizationCode(String code) {
-        String bearerToken = new Presteps().getToken(code);
+        String bearerToken = getToken(code);
         return bearerToken;
+    }
+
+    private String getToken(String code) {
+
+        RestAssured.baseURI = ConfigReader.readValueFromPropertyFile("accessTokenUrl");
+
+        String client_id = ConfigReader.readValueFromPropertyFile("clientId");
+        String client_secret = ConfigReader.readValueFromPropertyFile("clientSecret");
+
+        String accessToken = given()
+                .queryParam("client_id", client_id)
+                .queryParam("client_secret", client_secret)
+                .queryParam("code", code)
+                .log().all()
+                .when()
+                .post(ConfigReader.readValueFromPropertyFile("accessTokenUrl"))
+                .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .extract()
+                .response().jsonPath().getString("access_token");
+
+        return accessToken;
+
     }
 
     private String getAuthorizationCode() {
