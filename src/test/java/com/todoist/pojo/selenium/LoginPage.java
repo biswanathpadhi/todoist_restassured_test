@@ -19,12 +19,12 @@ public class LoginPage {
 
     private WebDriver driver;
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public String urfAfterlogin(){
+    public String urfAfterlogin() {
         email.sendKeys(ConfigReader.readValueFromPropertyFile("username"));
         password.sendKeys(ConfigReader.readValueFromPropertyFile("password"));
         login.click();

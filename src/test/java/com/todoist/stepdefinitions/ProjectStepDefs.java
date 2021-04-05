@@ -51,7 +51,7 @@ public class ProjectStepDefs {
         response = given(requestSpecification)
                 .auth().oauth2(bearerToken)
                 .header("Content-Type", "application/json")
-                .header("X-Request-Id", UUID.randomUUID().toString())
+                .header("X-Request-Id", util.getRandomUUID())
                 .body(Payload.createProjecRequestPayload("TA_projectcreate" + util.getRandomString()))
                 .log().all()
                 .when().post(resourceEndPoint)

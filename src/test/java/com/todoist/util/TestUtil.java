@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Random;
+import java.util.UUID;
 
 public class TestUtil {
 
@@ -19,9 +20,8 @@ public class TestUtil {
 
     /**
      * Returns the key from the response
-     * @param response
-     * @param key
-     * @return
+     *
+     *
      */
     public String getJsonPath(Response response, String key) {
         String resp = response.asString();
@@ -31,6 +31,7 @@ public class TestUtil {
 
     /**
      * Generates a random string of length provided
+     *
      * @param length
      * @return random string
      */
@@ -43,18 +44,20 @@ public class TestUtil {
 
     /**
      * Generates a random string of length provided
+     *
      * @return random string
      */
     public String getRandomString() {
-       return getRandomString(10);
+        return getRandomString(10);
     }
 
     /**
      * Generates a random number of length value
+     *
      * @param length
      * @return the random number
      */
-    public long getRandomNumber(int length){
+    public long getRandomNumber(int length) {
         boolean useLetters = false;
         boolean useNumbers = true;
         String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
@@ -64,16 +67,23 @@ public class TestUtil {
 
     /**
      * Generates a 10 digit random number
-     * @return  the random number
+     *
+     * @return the random number
      */
-    public long getRandomNumber(){
+    public long getRandomNumber() {
         return getRandomNumber(10);
     }
 
     /**
      * returns a random boolean value
-     * @return
+     *
+     *
      */
-    public boolean getRandomBoolean(){ return new Random().nextBoolean();}
+    public boolean getRandomBoolean() {
+        return new Random().nextBoolean();
+    }
 
+    public Object getRandomUUID() {
+        return UUID.randomUUID().toString();
+    }
 }
